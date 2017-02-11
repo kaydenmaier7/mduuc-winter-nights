@@ -7,7 +7,9 @@ class CreateCoordinators < ActiveRecord::Migration[5.0]
     	t.string   :phone
     	t.string   :password_digest
     	t.string   :category
+      t.string   :role, default: 'volunteer'
     	t.text		 :notes
+
 
 
       t.timestamps
