@@ -3,15 +3,15 @@ class ApplicationController < ActionController::Base
   helper_method :current_user, :logged_in?, :login, :logout, :errors
 
   def current_user
-    @current_user ||= Boot.find(session[:id]) if session[:id]
+    @current_user ||= User.find(session[:id]) if session[:id]
   end
 
   def logged_in?
     !!current_user
   end
 
-  def login(boot)
-    session[:id] = @boot.id
+  def login(user)
+    session[:id] = @user.id
   end
 
   def logout
