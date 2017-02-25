@@ -21,11 +21,14 @@ ActiveRecord::Schema.define(version: 20170211185032) do
     t.string   "email"
     t.string   "phone"
     t.string   "password_digest"
-    t.string   "category"
-    t.string   "role",            default: "volunteer"
+    t.string   "role",              default: "volunteer"
     t.text     "notes"
-    t.datetime "created_at",                            null: false
-    t.datetime "updated_at",                            null: false
+    t.string   "orientation_dates"
+    t.string   "background_date"
+    t.boolean  "oriented?",         default: false
+    t.boolean  "cleared?",          default: false
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
   end
 
 end
