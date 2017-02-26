@@ -13,10 +13,6 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.boolean  :oriented?, default: false
       t.boolean  :cleared?, default: false
 
-
-
-
-
       t.timestamps
     end
   end
