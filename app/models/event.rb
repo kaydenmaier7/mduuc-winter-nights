@@ -1,3 +1,3 @@
 class Event < ApplicationRecord
-	belongs_to :user, default: nil
+	has_and_belongs_to_many :users, default: nil
 end
