@@ -1,5 +1,5 @@
 <div class="users session">
-	<h1>Login Here!</h1>
+	<h1>Login Here</h1>
 
 	<%= form_for :session, url: sessions_path do |f| %>
 
@@ -23,8 +23,12 @@
 			<%= f.password_field :password %>
 		</p>
 
-		<p>
+		<p class="btn">
 			<%= f.submit 'Login' %>
+		</p>
+
+		<p class="sign-in">
+			<a href="/users/new">Not a Member yet?<br>Sign Up Here</a>
 		</p>
 
 	<% end %> 
