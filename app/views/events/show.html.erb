@@ -23,9 +23,11 @@
 	<%= form_for @event do |f| %>
 		
 		<% if @event.needed_volunteers > 0 && @event.users.include?(current_user) == false %>
-			<%= f.submit 'Volunteer' %>
+			<%= f.submit 'Volunteer', data: { confirm: 'Are you sure you want to sign up for this event?'} %>
 			
 		<% end %>
 	<% end %>
+
+	<%= link_to 'Profile Page', user_path %>
 
 </div>	

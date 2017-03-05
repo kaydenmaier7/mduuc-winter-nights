@@ -1,6 +1,8 @@
 <h1>All Events</h1>
 
-
+	
 	<% @events.each do |event| %>
+		<% if event.needed_volunteers > 0 %>
 		 <%= link_to event.event_type, event_path(event) %><br>
+		<% end %>
 	<% end %>
