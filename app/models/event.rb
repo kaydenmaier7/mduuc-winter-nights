@@ -4,4 +4,10 @@ class Event < ApplicationRecord
 	def needed_volunteers
 		self.max_volunteers - self.users.count
 	end
+
+	def add_volunteer
+		if current_user
+			self.users << current_user
+		end
+	end
 end

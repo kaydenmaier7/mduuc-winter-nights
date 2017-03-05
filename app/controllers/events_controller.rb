@@ -30,8 +30,8 @@ class EventsController < ApplicationController
 
 	def update
 		@event = Event.find(params[:id])
-
-		if @event.update(event_params)
+		@event.users << current_user
+		if @event.save
 			redirect_to @event
 		else
 			render 'edit'
@@ -50,6 +50,7 @@ private
 																		:event_type,
 																		:description,
 																		:date,
+																		:time,
 																		:max_volunteers
 																 )
 

@@ -63,9 +63,9 @@
 	padding-top: 5em 
 }
 
-.session {
+/*.session {
 	padding-top: 2em
-}
+}*/
 .container {
   margin-top:76px;
 }
@@ -110,6 +110,15 @@ body {
   text-align: center;
 }
 
+.apt-show {
+  text-align: center;
+}
+.apt-show label{
+   color: #19abb5;
+   font-size: 16px;
+   font-weight: 400;
+}
+
 .btn input{
   height: 24px;
   width: 18%;
@@ -125,6 +134,7 @@ body {
 }
 
 h1 {
+	padding-top: 1em;
   color:#828c91;
   font-size: 25px;
   font-weight: 200;

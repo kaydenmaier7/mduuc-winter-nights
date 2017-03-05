@@ -1,10 +1,31 @@
-<h1>Event Details</h1>
-<p>
-	<label>Event</label>
-	<%= @event.event_type %>
-</p>
+<div class="apt-show">
+	<h1>Event Details</h1>
+	<p>
+		<label>Event:</label><br>
+		<%= @event.event_type %>
+	</p>
 
-<p>
-	<label>Description</label>
-	<%= @event.description %>
-</p>
+	<p>
+		<label>Instructions:</label><br>
+		<%= @event.description %>
+	</p>
+
+	<p>
+		<label>Date:</label><br>
+		<%= @event.date %>
+	</p>
+
+	<p>
+		<label>Time:</label><br>
+		<%= @event.time %>
+	</p>
+
+	<%= form_for @event do |f| %>
+		
+		<% if @event.needed_volunteers > 0 && @event.users.include?(current_user) == false %>
+			<%= f.submit 'Volunteer' %>
+			
+		<% end %>
+	<% end %>
+
+</div>	
