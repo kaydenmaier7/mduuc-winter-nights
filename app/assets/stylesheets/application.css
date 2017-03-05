@@ -73,4 +73,54 @@ body {
   font-family: "Source Sans Pro",Helvetica,Arial,sans-serif;
 }
 
+.users_new label {
+  color:#828c91;
+  font-weight: 200;
+}
+
+.users-new input {
+  background-color: #bddde1;
+  color: #19abb5;
+  height: 24px;
+  width: 18%;
+  border: none;
+  border-radius: 2px;
+}
+
+.users-new label{
+   color: #7A8586;
+   font-size: 16px;
+   font-weight: 400;
+}
+
+.users-new-select label{
+   color: #7A8586;
+   font-size: 16px;
+   font-weight: 400;
+}
+
+.users {
+  text-align: center;
+}
+
+.btn input{
+  height: 24px;
+  width: 18%;
+  background-color: #19abb5 !important;
+  color: white !important;
+  border-radius: 2px;
+  border: none;
+}
+
+.btn input:hover {
+  background-color: #1cc0cb !important;
+  cursor: pointer !important;
+}
+
+
+
+
+
+
+
 

@@ -1,4 +1,4 @@
-  
+<div class="users">
   <%= form_for @user do |f| %>
   <% if @user.errors.any? %>
 
@@ -17,44 +17,39 @@
 
   <% end %>
 
-  <p>
-    <%= f.label :first_name %>
+  <p class="users-new">
+    <%= f.label :first_name %><br>
     <%= f.text_field :first_name %>
   </p>
 
-  <p>
-    <%= f.label :last_name %>
+  <p class="users-new">
+    <%= f.label :last_name %><br>
     <%= f.text_field :last_name %>
   </p>
 
 
-  <p>
-    <%= f.label :phone %>
+  <p class="users-new">
+    <%= f.label :phone %><br>
     <%= f.text_field :phone %>
   </p>
 
-  <p>
-    <%= f.label :email %>
+  <p class="users-new">
+    <%= f.label :email %><br>
     <%= f.text_field :email %>
   </p>
 
-  <p>
-    <%= f.label :password %>
+  <p class="users-new">
+    <%= f.label :password %><br>
     <%= f.password_field :password %>
   </p>
 
-  <p>
-    <%= f.label :'password confirmation' %>
+  <p class="users-new">
+    <%= f.label :'password confirmation' %><br>
     <%= f.password_field :password_confirmation %>
   </p>
 
-  <p>
-    <%= f.label :notes %>
-    <%= f.text_area :notes %>
-  </p>
-
-  <p>
-    <%= f.submit %>
+  <p class="btn">
+    <%= f.submit 'Create Account' %>
   </p>
   <% end %>
-
+</div>  
