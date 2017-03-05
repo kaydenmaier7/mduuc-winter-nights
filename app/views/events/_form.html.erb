@@ -18,8 +18,7 @@
 
   <p>
     <%= f.label :event_type, 'Event Type'  %>
-    <%= f.select :event_type, ['Laundry', 'Weekday Breakfast', 'Weekday Dinner', 'Weekend Breakfast', 'Weekend Lunch', 'Weekend Dinner', 'Daily Clean Up', 'Setup, Breakdown', 'Sleep Overs']%>
-
+    <%= f.select :event_type, ['First Day - Kitchen Setup', 'First Day - Bortin Hall Setup', 'Laundry', 'Weekday Breakfast', 'Weekend Breakfast',  'Weekend Lunch', 'Dinner', 'Dinner Music', 'Kids Weekday Activities', 'Kids Weekend Activities', 'Daily Clean Up', 'Sleep Over Volunteer', 'Final Day - Kitchen Clean Up', 'Final Day - Bortin Hall Clean Up']%>
   </p>
 
   <p>
@@ -27,6 +26,10 @@
     <%= f.text_area :description %>
   </p>
 
+  <p>
+    <%= f.label :date %>
+    <%= f.select :date, [ '04-10-2017', '04-11-2017', '04-12-2017', '04-13-2017', '04-14-2017', '04-15-2017', '04-16-2017', '04-17-2017', '04-18-2017', '04-19-2017', '04-20-2017', '04-21-2017', '04-22-2017', '04-23-2017', '04-24-2017' ] %>
+  </p>
 
   <p>
     <%= f.label :max_volunteers, 'Max Volunteer Count' %>

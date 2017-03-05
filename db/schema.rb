@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20170226102448) do
   create_table "events", force: :cascade do |t|
     t.string   "event_type",                  null: false
     t.text     "description",                 null: false
+    t.string   "date",                        null: false
     t.integer  "max_volunteers", default: 10
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
