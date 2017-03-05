@@ -7,24 +7,10 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-  <nav id="navbar">
-  <div id="nav-container">
-    <ul id="UL_16">
-      <% if current_user %>
-        <li><%= link_to 'Home', root_path %></li>
-        <li><%= link_to 'Profile Page', user_path(current_user.id) %></li>
-        <li><%= link_to 'Edit Profile', edit_user_path(current_user.id) %></li>
-        <li><%= link_to 'Logout', session_path(session[:id]), method: :delete %></li>
-      <% else %>
-        <li><%= link_to 'Home', root_path %></li>
-        <li><%= link_to 'Sign Up', new_user_path %></li>
-        <li><%= link_to 'Login', new_session_path %></li>
-      <% end %>
-      <li><%= link_to 'Events', events_path %></li>
-    </ul>
-  </div>
-</nav> 
   <body>
-    <%= yield %>
+    <%= render partial: 'partials/navbar'  %>
+    <div class="container">
+      <%= yield %>
+    </div>  
   </body>
 </html>
