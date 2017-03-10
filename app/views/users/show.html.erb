@@ -1,1 +1,21 @@
-<h1>Profile Page</h1>
+<h1>Events You've Volunteered For:</h1>
+<div>
+	<% if @user.events.count > 0 %>
+			<% @user.events.each do |event| %>
+				<%= event.event_type %><br>
+			<% end %>
+		<% end %>
+	
+</div>	
+
+
+
+<div>
+	<a href="/events">Volunteer For Events Here</a>
+	
+</div>
+
+
+<!-- users can see other volunteer names signed up for the event -->
+
+<!-- if no volunteered events, flag -->

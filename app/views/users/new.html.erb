@@ -1,2 +1,62 @@
-<h1>Create New Account</h1>
-<%= render 'form' %>
+<div class="users">
+	<h1>Create Account</h1>
+  <%= form_for @user do |f| %>
+  <% if @user.errors.any? %>
+
+  <div id="error_explanation">
+    <h2>
+      <%= pluralize(@user.errors.count, 'error') %> prohibited this user from being saved:
+    </h2>
+
+    <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+      <li> <%= msg %> </li>
+      <% end %>
+    </ul>
+
+  </div>
+
+  <% end %>
+
+  <p class="users-new">
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </p>
+
+  <p class="users-new">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </p>
+
+
+  <p class="users-new">
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone %>
+  </p>
+
+  <p class="users-new">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </p>
+
+  <p class="users-new">
+    <%= f.label :password %><br>
+    <%= f.password_field :password %>
+  </p>
+
+  <p class="users-new">
+    <%= f.label :'password confirmation' %><br>
+    <%= f.password_field :password_confirmation %>
+  </p>
+
+  <p class="btn">
+    <%= f.submit 'Create Account' %>
+  </p>
+  <% end %>
+
+  <p class="sign-in">
+			<a href="/sessions/new">Already have an Account?<br>Sign In</a>
+		</p>
+</div>  
+
+
