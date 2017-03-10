@@ -31,6 +31,7 @@ class EventsController < ApplicationController
 	def update
 		@event = Event.find(params[:id])
 		@event.users << current_user
+		# add provision for Admin to edit events
 		if @event.save
 			redirect_to @event
 		else

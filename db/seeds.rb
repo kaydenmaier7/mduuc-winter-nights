@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 events = Event.create([
-											{event_type: 'First Day - Kitchen Setup', description: "Set up pantry, clean out refrigerator, and make snack packets.", date: "April 9, 2017", time: "Approximately 1:00 pm - 3:00 pm.", max_volunteers: 10},
+											{event_type: 'Prep Kitchen Setup', description: "Set up pantry, clean out refrigerator, and make snack packets.", date: "April 9, 2017", time: "Approximately 1:00 pm - 3:00 pm.", max_volunteers: 10},
 
 											{event_type: 'First Day - Bortin Hall Setup', description: 'Set up tables and chairs. Unload truck and store supplies. Set up kids’ activities center. Prepare site for guests’ arrival.', date: "April 10, 2017", time: "Approximately 9:00 am - 12:00 pm.", max_volunteers: 10},
 
