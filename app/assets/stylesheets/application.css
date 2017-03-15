@@ -60,7 +60,7 @@
 }/*#DIV_2*/
 
 #root-image {
-	padding-top: 5em 
+	padding-top: 1em
 }
 
 /*.session {
@@ -152,6 +152,11 @@ h2 {
   font-size: 25px;
   font-weight: 200;
 
+}
+
+.info {
+  padding-left: 3em;
+  color: black;
 }
 
 #event-list {
