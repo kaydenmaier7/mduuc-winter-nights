@@ -155,8 +155,9 @@ h2 {
 }
 
 .info {
-  padding-left: 3em;
+  padding-left: 2em;
   color: black;
+  font-family: "Source Sans Pro",Helvetica,Arial,sans-serif;
 }
 
 #event-list {

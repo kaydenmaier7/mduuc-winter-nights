@@ -54,7 +54,7 @@ events = Event.create([
 
 											{event_type: 'Dinner', description: 'Prepare and serve hot dinner. Clean up after eating with guests. Assist guests with making their bagged lunches for the following day.', date: "April 13, 2017", time: "Approximately 5:15 pm - 7:30 pm.", max_volunteers: 6},
 
-											{event_type: 'Dinner', description: 'Prepare and serve hot dinner. Clean up after eating with guests.', date: "April 14, 2017", time: "Approximately 5:15 pm - 7:30 pm.", max_volunteers: 6},
+											{event_type: 'Dinner', description: 'Prepare and serve hot dinner. Clean up after eating with guests.', date: "April 14, 2017", time: "Approximately 5:15 pm - 7:30 pm.", max_volunteers: 1},
 
 											{event_type: 'Dinner', description: 'Prepare and serve hot dinner. Clean up after eating with guests.', date: "April 15, 2017", time: "Approximately 5:15 pm - 7:30 pm.", max_volunteers: 6},
 
@@ -113,7 +113,7 @@ events = Event.create([
 
 											{event_type: 'Kids Weekday Activities', description: 'Lead rug games and group activities. Help with homework, then read stories. Clean up before bedtime. ', date: "April 13, 2017", time: "Approximately 5:30 pm - 8:30 pm.", max_volunteers: 6},
 
-											{event_type: 'Kids Weekday Activities', description: 'Lead rug games and group activities. Help with homework, then read stories. Clean up before bedtime. ', date: "April 14, 2017", time: "Approximately 5:30 pm - 8:30 pm.", max_volunteers: 6},
+											{event_type: 'Kids Weekday Activities', description: 'Lead rug games and group activities. Help with homework, then read stories. Clean up before bedtime. ', date: "April 14, 2017", time: "Approximately 5:30 pm - 8:30 pm.", max_volunteers: 1},
 
 											{event_type: 'Kids Weekday Activities', description: 'Lead rug games and group activities. Help with homework, then read stories. Clean up before bedtime. ', date: "April 17, 2017", time: "Approximately 5:30 pm - 8:30 pm.", max_volunteers: 6},
 
