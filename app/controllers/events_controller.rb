@@ -18,6 +18,17 @@ class EventsController < ApplicationController
 		end
 
 	end
+	
+	def wake
+		if current_user.role == 'Admin'
+			@event = Event.find(params[:event])
+			@event.users.delete(params[:user])
+			redirect_to @event
+		else
+			render 'wake'
+		end
+
+	end
 
 	def show
 		@event = Event.find(params[:id])
@@ -43,6 +54,7 @@ class EventsController < ApplicationController
 	def destroy
 
 	end
+
 
 private
 	def event_params

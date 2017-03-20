@@ -29,6 +29,17 @@
 			<% end %>
 		</p>	
 	<% end %>
+	
+	<div class="event_item">
+		<% if current_user.role == 'Admin' %>
+			<h1>Volunteers For This Event</h1>
+			<% @event.users.each do |user| %>
+				<li> <%= link_to "Remove #{user.first_name} #{user.last_name} from this event?", events_wake_path(event: @event.id, user: user.id), data: { confirm: 'Are you sure you want to remove this volunteer from this event?'} %> </li>
+				
+			<% end %>
+			
+		<% end %>
+	</div>	
 	<p class="sign-in">
 		<%= link_to 'My Profile Page', user_path(current_user) %>
 	</p>	
