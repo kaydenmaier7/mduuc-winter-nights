@@ -3,13 +3,6 @@ class EventsController < ApplicationController
 	def index
 		if params[:search]
 			@events = Event.search(params[:search].capitalize)
-			p '*' * 100
-			p params 
-			p '*' * 100
-			p '$$' * 100
-			p @events
-			p '$$' * 100
-			
 			render 'roster'
 		else
 			@events = Event.all
