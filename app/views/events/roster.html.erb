@@ -1,0 +1,36 @@
+<div>
+	<div>
+		<%= form_tag(events_path, method: :get) do %>
+			<%= text_field_tag :search %>
+			<%= submit_tag 'Search', name: nil %>
+			
+		<% end %> 
+	</div>
+	<div class="event-item" align="center">
+		<% @events.each do |event| %>
+			<h1><%= event.event_type %> on <%= event.date %></h1>
+		<h1 class="volunteer">Volunteers:</h1>
+			<% if event.users.count != 0 %>
+			<table border="1 px">	
+				<tr>
+					<th>Name</th>
+					<th>Phone</th>
+					<th>Email</th>
+				</tr>
+				<tr>
+				<% event.users.each do |user| %>
+					<td><%= user.first_name.capitalize %> <%= user.last_name.capitalize %></td>
+						<td><%= user.phone %></td>
+						<td><%= user.email %></td>
+				</tr>		
+				<% end %>
+			</table>			
+			<% else %>
+				<h1 class="volunteer_msg">No Volunteers Signed Up</h1>
+			<% end %>
+				<h1 class="volunteer">Volunteer Slots Open</h1>
+					<%= event.needed_volunteers %>
+			
+		<% end %>
+	</div>
+</div>

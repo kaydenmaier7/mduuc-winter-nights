@@ -1,5 +1,9 @@
 <h1 >Click on an Event to view details and have an option to volunteer:</h1>
-
+<%= form_tag(events_path, method: :get) do %>
+	<%= text_field_tag :search, params[:search], placeholder: 'Search Events' %>
+	<%= submit_tag 'Search', name: nil %>
+	
+<% end %> 
 
 <div id="event-list" align="center">
 	<h2>April 9th, 2017</h2>

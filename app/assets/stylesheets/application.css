@@ -145,6 +145,20 @@ h1 {
   font-weight: 200;
 }
 
+.volunteer {
+  padding-top: 1em;
+  color: black;
+  font-size: 25px;
+  font-weight: 200;
+}
+
+.volunteer_msg {
+  padding-top: 1em;
+  color: red;
+  font-size: 14px;
+  font-weight: 200;
+}
+
 h2 {
   padding-top: 1em;
   padding-left: 3em;
@@ -242,3 +256,12 @@ h2 {
   line-height: 0;
 }
 
+.volunteer-info {
+  display: inherit;
+  clear: both; 
+  margin: 0;
+  padding: 0;
+  color: rgb(130, 140, 145);
+  position: center;
+  right: 20px;
+}

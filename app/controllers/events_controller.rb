@@ -1,7 +1,19 @@
 class EventsController < ApplicationController
 
 	def index
-		@events = Event.all
+		if params[:search]
+			@events = Event.search(params[:search].capitalize)
+			p '*' * 100
+			p params 
+			p '*' * 100
+			p '$$' * 100
+			p @events
+			p '$$' * 100
+			
+			render 'roster'
+		else
+			@events = Event.all
+		end
 	end
 
 	def new
@@ -64,7 +76,8 @@ private
 																		:description,
 																		:date,
 																		:time,
-																		:max_volunteers
+																		:max_volunteers,
+																		:search
 																 )
 
 	end

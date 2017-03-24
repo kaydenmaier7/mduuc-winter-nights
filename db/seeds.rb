@@ -76,33 +76,33 @@ events = Event.create([
 
 
 
-											{event_type: 'Dinner Music', description: 'Play music quietly as guests and volunteers eat dinner.', date: "April 10, 2017", time: "Approximately 6:00 pm - 7:00 pm.", max_volunteers: 1},
+											{event_type: 'Music', description: 'Play music quietly as guests and volunteers eat dinner.', date: "April 10, 2017", time: "Approximately 6:00 pm - 7:00 pm.", max_volunteers: 1},
 
-                      {event_type: 'Dinner Music', description: 'Play music quietly as guests and volunteers eat dinner.', date: "April 11, 2017", time: "Approximately 6:00 pm - 7:00 pm.", max_volunteers: 1},
+                      {event_type: 'Music', description: 'Play music quietly as guests and volunteers eat dinner.', date: "April 11, 2017", time: "Approximately 6:00 pm - 7:00 pm.", max_volunteers: 1},
 
-                      {event_type: 'Dinner Music', description: 'Play music quietly as guests and volunteers eat dinner.', date: "April 12, 2017", time: "Approximately 6:00 pm - 7:00 pm.", max_volunteers: 1},
+                      {event_type: 'Music', description: 'Play music quietly as guests and volunteers eat dinner.', date: "April 12, 2017", time: "Approximately 6:00 pm - 7:00 pm.", max_volunteers: 1},
 
-                      {event_type: 'Dinner Music', description: 'Play music quietly as guests and volunteers eat dinner.', date: "April 13, 2017", time: "Approximately 6:00 pm - 7:00 pm.", max_volunteers: 1},
+                      {event_type: 'Music', description: 'Play music quietly as guests and volunteers eat dinner.', date: "April 13, 2017", time: "Approximately 6:00 pm - 7:00 pm.", max_volunteers: 1},
 
-                      {event_type: 'Dinner Music', description: 'Play music quietly as guests and volunteers eat dinner.', date: "April 14, 2017", time: "Approximately 6:00 pm - 7:00 pm.", max_volunteers: 1},
+                      {event_type: 'Music', description: 'Play music quietly as guests and volunteers eat dinner.', date: "April 14, 2017", time: "Approximately 6:00 pm - 7:00 pm.", max_volunteers: 1},
 
-                      {event_type: 'Dinner Music', description: 'Play music quietly as guests and volunteers eat dinner.', date: "April 15, 2017", time: "Approximately 6:00 pm - 7:00 pm.", max_volunteers: 1},
+                      {event_type: 'Music', description: 'Play music quietly as guests and volunteers eat dinner.', date: "April 15, 2017", time: "Approximately 6:00 pm - 7:00 pm.", max_volunteers: 1},
 
-                      {event_type: 'Dinner Music', description: 'Play music quietly as guests and volunteers eat dinner.', date: "April 16, 2017", time: "Approximately 6:00 pm - 7:00 pm.", max_volunteers: 1},
+                      {event_type: 'Music', description: 'Play music quietly as guests and volunteers eat dinner.', date: "April 16, 2017", time: "Approximately 6:00 pm - 7:00 pm.", max_volunteers: 1},
 
-                      {event_type: 'Dinner Music', description: 'Play music quietly as guests and volunteers eat dinner.', date: "April 17, 2017", time: "Approximately 6:00 pm - 7:00 pm.", max_volunteers: 1},
+                      {event_type: 'Music', description: 'Play music quietly as guests and volunteers eat dinner.', date: "April 17, 2017", time: "Approximately 6:00 pm - 7:00 pm.", max_volunteers: 1},
 
-                      {event_type: 'Dinner Music', description: 'Play music quietly as guests and volunteers eat dinner.', date: "April 18, 2017", time: "Approximately 6:00 pm - 7:00 pm.", max_volunteers: 1},
+                      {event_type: 'Music', description: 'Play music quietly as guests and volunteers eat dinner.', date: "April 18, 2017", time: "Approximately 6:00 pm - 7:00 pm.", max_volunteers: 1},
 
-                      {event_type: 'Dinner Music', description: 'Play music quietly as guests and volunteers eat dinner.', date: "April 19, 2017", time: "Approximately 6:00 pm - 7:00 pm.", max_volunteers: 1},
+                      {event_type: 'Music', description: 'Play music quietly as guests and volunteers eat dinner.', date: "April 19, 2017", time: "Approximately 6:00 pm - 7:00 pm.", max_volunteers: 1},
 
-                      {event_type: 'Dinner Music', description: 'Play music quietly as guests and volunteers eat dinner.', date: "April 20, 2017", time: "Approximately 6:00 pm - 7:00 pm.", max_volunteers: 1},
+                      {event_type: 'Music', description: 'Play music quietly as guests and volunteers eat dinner.', date: "April 20, 2017", time: "Approximately 6:00 pm - 7:00 pm.", max_volunteers: 1},
 
-                      {event_type: 'Dinner Music', description: 'Play music quietly as guests and volunteers eat dinner.', date: "April 21, 2017", time: "Approximately 6:00 pm - 7:00 pm.", max_volunteers: 1},
+                      {event_type: 'Music', description: 'Play music quietly as guests and volunteers eat dinner.', date: "April 21, 2017", time: "Approximately 6:00 pm - 7:00 pm.", max_volunteers: 1},
 
-                      {event_type: 'Dinner Music', description: 'Play music quietly as guests and volunteers eat dinner.', date: "April 22, 2017", time: "Approximately 6:00 pm - 7:00 pm.", max_volunteers: 1},
+                      {event_type: 'Music', description: 'Play music quietly as guests and volunteers eat dinner.', date: "April 22, 2017", time: "Approximately 6:00 pm - 7:00 pm.", max_volunteers: 1},
 
-                      {event_type: 'Dinner Music', description: 'Play music quietly as guests and volunteers eat dinner.', date: "April 23, 2017", time: "Approximately 6:00 pm - 7:00 pm.", max_volunteers: 1},
+                      {event_type: 'Music', description: 'Play music quietly as guests and volunteers eat dinner.', date: "April 23, 2017", time: "Approximately 6:00 pm - 7:00 pm.", max_volunteers: 1},
 
 
                       {event_type: 'Kids Weekday Activities', description: 'Lead rug games and group activities. Help with homework, then read stories. Clean up before bedtime. ', date: "April 10, 2017", time: "Approximately 5:30 pm - 8:30 pm.", max_volunteers: 6},

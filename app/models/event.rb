@@ -10,4 +10,10 @@ class Event < ApplicationRecord
 			self.users << current_user
 		end
 	end
+
+	def self.search(phrase)
+		if phrase
+			where('event_type ILIKE ? OR date ILIKE ?', "%#{phrase}%", "%#{phrase}%")
+		end
+	end
 end
