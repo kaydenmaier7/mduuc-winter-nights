@@ -265,3 +265,7 @@ h2 {
   position: center;
   right: 20px;
 }
+
+.warning {
+  color: red;
+}

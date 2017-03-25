@@ -37,6 +37,12 @@
 				<li> <%= link_to "#{user.first_name} #{user.last_name} - Remove Volunteer?", events_wake_path(event: @event.id, user: user.id), data: { confirm: 'Are you sure you want to remove this volunteer from this event?'} %> </li>
 				
 			<% end %>
+			<% else %>
+				<h1>Volunteers</h1>
+				<% @event.users.each do |user| %>
+					<%= user.first_name.capitalize %> <%= user.last_name.capitalize %><br>
+					
+				<% end %>
 			
 		<% end %>
 	</div>	

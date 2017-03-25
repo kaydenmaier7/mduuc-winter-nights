@@ -1,10 +1,13 @@
 <h1 align="center">Events You've Volunteered For:</h1>
 <div align="center" class="event_item">
 	<% if @user.events.count > 0 %>
-			<% @user.events.each do |event| %>
-			<%= link_to event.event_type, event_path(event)  %> <%= event.date %><br>
-			<% end %>
+		<% @user.events.order('date').each do |event| %>
+			<%= link_to "#{event.event_type} on #{event.date}" , event_path(event)  %><br>
 		<% end %>
+	<% else %>
+		<h3 class="warning">You have Not Signed Up For Any Events</h3>
+		<%= link_to 'Sign Up To Volunteer Here', events_path %>
+	<% end %>
 	
 </div>	
 
