@@ -1,9 +1,14 @@
-<h1>MDUUC Coordinators:</h1>
-
 <div align="center">
-	<h1>There are <%= @users.count %> matches </h1> 
-	<% @users.each do |user| %>
-		<%= link_to "#{user.first_name.capitalize} #{user.last_name.capitalize}", edit_user_path(user) %>
-		
-	<% end %>
+	<h1>MDUUC Volunteers</h1>
+
+	<h1><%= pluralize(@users.count, 'match') %> found </h1> 
+	<div class="event_item" >
+		<ol>
+			<% @users.each do |user| %>
+				<li>
+					<%= link_to "#{user.first_name.capitalize} #{user.last_name.capitalize}", edit_user_path(user) %>
+				</li>	
+			<% end %>
+		</ol>
+	</div>	
 </div>
