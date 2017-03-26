@@ -10,4 +10,10 @@ class User < ApplicationRecord
 	def downcase_email
 		self.email.downcase!
 	end
+
+	def self.search(phrase)
+		if phrase
+			where('first_name ILIKE ? OR last_name ILIKE ? OR email ILIKE ?', "%#{phrase}%", "%#{phrase}%", "%#{phrase}%")
+		end
+	end
 end

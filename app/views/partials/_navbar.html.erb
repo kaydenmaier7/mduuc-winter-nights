@@ -1,5 +1,14 @@
   <nav id="navbar">
   <div id="nav-container">
+    <div id="nav-search">
+      <% if current_user && current_user.role == 'Admin' %>
+        <%= form_tag(users_path, method: :get) do %>
+          <%= text_field_tag :search, params[:search], placeholder: 'Search Volunteers' %>
+          <%= submit_tag 'Search', name: nil %>
+        <% end %> 
+      <% end %>
+    </div>
+
     <ul id="UL_16">
       <% if current_user %>
         <li><%= link_to 'Home', root_path %></li>
