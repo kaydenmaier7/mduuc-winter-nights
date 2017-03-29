@@ -1,1 +1,53 @@
-<h1>Update Event</h1>
+<div class="users">
+	<h1>Update Event</h1>
+
+	<%= form_for @event do |f| %>
+	  <% if @event.errors.any? %>
+
+	  <div id="error_explanation">
+	    <h2>
+	      <%= pluralize(@event.errors.count, 'error') %> prohibited this user from being saved:
+	    </h2>
+
+	    <ul>
+	      <% @event.errors.full_messages.each do |msg| %>
+	      <li> <%= msg %> </li>
+	      <% end %>
+	    </ul>
+
+	  </div>
+
+	  <% end %>
+
+	  <p class="users-new">
+	    <%= f.label :event_type %><br>
+	    <%= f.text_field :event_type %>
+	  </p>
+
+	  <p class="users-new">
+	    <%= f.label :description %><br>
+	    <%= f.text_field :description %>
+	  </p>
+
+
+	  <p class="users-new">
+	    <%= f.label :date %><br>
+	    <%= f.text_field :date %>
+	  </p>
+
+	  <p class="users-new">
+	    <%= f.label :time %><br>
+	    <%= f.text_field :time %>
+	  </p>
+
+	  <p class="users-new">
+	    <%= f.label :max_volunteers %><br>
+	    <%= f.text_field :max_volunteers %>
+	  </p>
+
+	  
+	  <p class="btn">
+	    <%= f.submit 'Update Event' %>
+	  </p>
+	  <% end %>
+</div>	  
