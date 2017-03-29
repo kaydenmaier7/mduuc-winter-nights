@@ -1,0 +1,36 @@
+<div class="search-show">
+	<% if current_user.role == 'Admin' %>
+		
+		<%= form_tag(events_path, method: :get) do %>
+			<p>
+				<label>Volunteers By Event:</label>
+				<%= select_tag(:search, options_for_select(@event_types)) %> 
+			</p>
+
+			<p>
+				<label>Volunteers By Date:</label>
+				<%= select_tag(:list_events, options_for_select(@dates)) %>
+			</p>
+
+			<p>
+				<%= submit_tag 'Search', name: nil %>
+			</p>
+		<% end %> 
+	<% end %>
+</div>	
+
+<div class="event-item" align="center">
+	<% if @events.count > 0 %>
+		<h1><%= pluralize(@events.count, 'event') %> on <%= @events.first.date %> </h1>
+	<% else %>
+		<h1 class="warning">Please Select an Event or Date</h1>
+	<% end %>
+
+	
+	<ol>
+		<% @events.each do |event| %>
+			<li><%= event.event_type %></li>
+
+		<% end %>
+	</ol> 
+</div>		
