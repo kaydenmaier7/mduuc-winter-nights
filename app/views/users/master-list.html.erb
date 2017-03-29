@@ -1,0 +1,47 @@
+<div align="center">
+	<h1>MDUUC Volunteers Master List</h1>
+
+	<div class="event_item" >
+		<% if current_user.role == 'Admin' %>
+			<h1><%= pluralize(@users.count, 'volunteer') %> found </h1> 
+			<table border="1">
+				<tr>
+					<th>Name</th>	
+					<th>Phone</th>	
+					<th>Email</th>	
+				</tr>
+				<tr>
+				<% @users.each do |user| %>
+					<td><%= user.first_name.capitalize %> <%= user.last_name.capitalize %></td>
+					<td><%= user.phone %></td>
+					<td><%= user.email %></td>
+				</tr>	
+				<% end %>
+			</table>
+		<% else %>
+			<table border="1">
+				<tr>
+					<th>Volunteers</th>
+					<th>Events</th>		
+				</tr>
+				<tr>
+				<% @users.each do |user| %>
+					<td><%= user.first_name.capitalize %> <%= user.last_name.capitalize %></td>
+					<td>
+						<% if user.events.count > 0 %>
+							<% i = 0 %>
+							<% while i < user.events.count %>
+								 <% events = user.events %>
+								 <%= events[i].event_type %> on <%= events[i].date %><br>
+							<% i += 1 %>
+							<% end %>
+						<% else %>
+							Not Yet Signed Up For An Event
+						<% end %>
+					</td>
+				</tr>	
+				<% end %>
+			</table>
+		<% end %>
+	</div>	
+</div>
