@@ -8,13 +8,26 @@
 				<tr>
 					<th>Name</th>	
 					<th>Phone</th>	
-					<th>Email</th>	
+					<th>Email</th>
+					<th>Events</th>	
 				</tr>
 				<tr>
 				<% @users.each do |user| %>
 					<td><%= user.first_name.capitalize %> <%= user.last_name.capitalize %></td>
 					<td><%= user.phone %></td>
 					<td><%= user.email %></td>
+					<td>
+						<% if user.events.count > 0 %>
+							<% i = 0 %>
+							<% while i < user.events.count %>
+								 <% events = user.events %>
+								 <%= events[i].event_type %> on <%= events[i].date %><br>
+							<% i += 1 %>
+							<% end %>
+						<% else %>
+							Not Yet Signed Up For An Event
+						<% end %>
+					</td>
 				</tr>	
 				<% end %>
 			</table>
