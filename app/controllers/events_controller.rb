@@ -38,7 +38,7 @@ class EventsController < ApplicationController
 									'Final Day - Bortin Hall Clean Up'
 								]
 	def index
-		if params[:search] && params[:search] != ""
+		if params[:search] && params[:search] != "" && params[:search] != 'Select Event'
 			@dates = DATES
 			@event_types = EVENTS_TYPES
 			
