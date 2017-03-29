@@ -1,10 +1,60 @@
 class EventsController < ApplicationController
+	DATES = [
+						'Select Date', 
+						'April 9, 2017', 
+						'April 10, 2017', 
+						'April 11, 2017', 
+						'April 12, 2017', 
+						'April 13, 2017', 
+						'April 14, 2017', 
+						'April 15, 2017', 
+						'April 16, 2017', 
+						'April 17, 2017', 
+						'April 18, 2017', 
+						'April 19, 2017', 
+						'April 20, 2017', 
+						'April 21, 2017', 
+						'April 22, 2017', 
+						'April 23, 2017', 
+						'April 24, 2017' 
+					]
 
+	
+	EVENTS_TYPES = [
+									'Select Event',
+									'First Day - Kitchen Setup', 
+									'First Day - Bortin Hall Setup', 
+									'Laundry', 
+									'Weekday Breakfast', 
+									'Weekend Breakfast',  
+									'Weekend Lunch', 
+									'Dinner', 
+									'Music', 
+									'Kids Weekday Activities', 
+									'Kids Weekend Activities', 
+									'Daily Clean Up', 
+									'Sleep Over Volunteer', 
+									'Final Day - Kitchen Clean Up', 
+									'Final Day - Bortin Hall Clean Up'
+								]
 	def index
-		if params[:search]
+		if params[:search] && params[:search] != ""
+			@dates = DATES
+			@event_types = EVENTS_TYPES
+			
 			@events = Event.search(params[:search].capitalize)
+			
 			render 'roster'
+		elsif params[:list_events] && params[:list_events] != ""
+			@dates = DATES
+			@event_types = EVENTS_TYPES
+			
+			@events = Event.list_events(params[:list_events].capitalize)
+
+			render 'date'	
 		else
+			@dates = DATES
+			@event_types = EVENTS_TYPES
 			@events = Event.all
 		end
 	end
@@ -64,13 +114,14 @@ class EventsController < ApplicationController
 private
 	def event_params
 		params.require(:event).permit(
-																		:events, 
-																		:event_type,
-																		:description,
-																		:date,
-																		:time,
-																		:max_volunteers,
-																		:search
+																	:events, 
+																	:event_type,
+																	:description,
+																	:date,
+																	:time,
+																	:max_volunteers,
+																	:search,
+																	:list_events
 																 )
 
 	end

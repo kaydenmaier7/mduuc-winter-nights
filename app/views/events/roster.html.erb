@@ -1,17 +1,30 @@
 <div>
-	<div>
+	<% if current_user.role == 'Admin' %>
 		<%= form_tag(events_path, method: :get) do %>
-			<%= text_field_tag :search %>
-			<%= submit_tag 'Search', name: nil %>
-			
+			<p>
+				<label>Volunteers By Event:</label>
+				<%= select_tag(:search, options_for_select(@event_types)) %>
+			</p>
+
+			<p>
+				<label>Volunteers By Date:</label>
+				<%= select_tag(:list_events, options_for_select(@dates)) %>
+			</p>
+
+			<p>
+				<%= submit_tag 'Search', name: nil %>
+			</p>
 		<% end %> 
-	</div>
-	<div class="event-item" align="center">
+	<% end %>
+</div>
+
+<div class="event-item" align="center">
 	<h1><%= pluralize(@events.count, 'match') %> found </h1> 
-		<% @events.each do |event| %>
-			<h1><%= event.event_type %> on <%= event.date %></h1>
+	<% @events.each do |event| %>
+		
+		<h1><%= event.event_type %> on <%= event.date %></h1>
 		<h1 class="volunteer">Volunteers:</h1>
-			<% if event.users.count != 0 %>
+		<% if event.users.count != 0 %>
 			<table border="1 px">	
 				<tr>
 					<th>Name</th>
@@ -19,19 +32,18 @@
 					<th>Email</th>
 				</tr>
 				<tr>
-				<% event.users.each do |user| %>
-					<td><%= user.first_name.capitalize %> <%= user.last_name.capitalize %></td>
+					<% event.users.each do |user| %>
+						<td><%= user.first_name.capitalize %> <%= user.last_name.capitalize %></td>
 						<td><%= user.phone %></td>
 						<td><%= user.email %></td>
 				</tr>		
-				<% end %>
+					<% end %>
 			</table>			
-			<% else %>
-				<h1 class="volunteer_msg">No Volunteers Signed Up</h1>
-			<% end %>
-				<h1 class="volunteer">Volunteer Slots Open</h1>
-					<%= event.needed_volunteers %>
-			
+		<% else %>
+			<h1 class="volunteer_msg">No Volunteers Signed Up</h1>
 		<% end %>
-	</div>
+		<h1 class="volunteer">Volunteer Slots Open</h1>
+			<%= event.needed_volunteers %>
+			
+	<% end %>
 </div>

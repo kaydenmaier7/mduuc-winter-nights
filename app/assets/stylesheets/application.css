@@ -124,6 +124,12 @@ body {
    font-weight: 400;
 }
 
+.search-show label {
+  color: black;
+   font-size: 16px;
+   font-weight: 400;
+}
+
 .btn input{
   height: 24px;
   width: 18%;
