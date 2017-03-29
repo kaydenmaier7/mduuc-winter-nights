@@ -25,12 +25,30 @@
 	<% else %>
 		<h1 class="warning">Please Select an Event or Date</h1>
 	<% end %>
-
-	
-	<ol>
 		<% @events.each do |event| %>
-			<li><%= event.event_type %></li>
+			<h1 class="volunteer"><%= event.event_type %></h1>
+			<h1 class="volunteer">Volunteers:</h1>
+			<% if event.users.count != 0  %>
+				<table border="1px">
+					<tr>
+						<th>Name</th>
+						<th>Phone</th>
+						<th>Email</th>
+					</tr>
 
-		<% end %>
-	</ol> 
+					<tr>
+						<% event.users.each do |user| %>
+							<td><%= user.first_name.capitalize %> <%= user.last_name.capitalize %></td>
+							<td><%= user.phone %></td>
+							<td><%= user.email %></td>
+					</tr>
+						<% end %>
+				</table>
+
+			<% else %>
+				<h1 class="volunteer_msg">No Volunteers Signed Up</h1>
+			<% end %>
+			<h1 class="volunteer">Volunteer Slots Open</h1>
+			<%= event.needed_volunteers %>
+		<% end %> 
 </div>		
