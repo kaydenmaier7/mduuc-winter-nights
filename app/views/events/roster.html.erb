@@ -17,7 +17,7 @@
 </div>
 
 <div class="event-item" align="center">
-	<h1><%= pluralize(@events.count, 'match') %> found for <%= @events.first.event_type %></h1> 
+	<h1><%= pluralize(@events.count, 'match') %> found</h1> 
 	<% if current_user.role == 'Admin' %>
 		<% @events.each do |event| %>
 			<h1><%= event.event_type %> on <%= event.date %></h1>
