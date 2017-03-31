@@ -2,8 +2,8 @@
 	<h1>MDUUC Volunteers Master List</h1>
 
 	<div class="event_item" >
+		<h1><%= pluralize(@users.count, 'volunteer') %> found </h1> 
 		<% if current_user.role == 'Admin' %>
-			<h1><%= pluralize(@users.count, 'volunteer') %> found </h1> 
 			<table border="1">
 				<tr>
 					<th>Name</th>	
