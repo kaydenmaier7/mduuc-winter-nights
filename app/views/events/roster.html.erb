@@ -19,7 +19,7 @@
 </div>
 
 <div class="event-item" align="center">
-	<h1><%= pluralize(@events.count, 'match') %> found </h1> 
+	<h1><%= pluralize(@events.count, 'match') %> found for <%= @events.first.event_type %></h1> 
 	<% @events.each do |event| %>
 		
 		<h1><%= event.event_type %> on <%= event.date %></h1>
@@ -40,7 +40,7 @@
 						<td><%= user.first_name.capitalize %> <%= user.last_name.capitalize %></td>
 						<td><%= user.phone %></td>
 						<td><%= user.email %></td>
-						<td><%= event.needed_volunteers %></td>
+						<td align="center"><%= event.needed_volunteers %></td>
 				</tr>		
 					<% end %>
 			</table>			
