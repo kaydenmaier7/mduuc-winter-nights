@@ -146,7 +146,7 @@ body {
 
 h1 {
 	padding-top: 1em;
-  color:#828c91;
+  color: black;
   font-size: 25px;
   font-weight: 200;
 }
@@ -161,7 +161,7 @@ h1 {
 .volunteer_msg {
   padding-top: 1em;
   color: red;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 200;
 }
 
@@ -196,7 +196,7 @@ h2 {
 }
 
 #UL_16 a {
-  color: #828C9A;
+  color: black;
   cursor: pointer;
   font-size: 14px !important;
   font-weight: 500;

@@ -23,27 +23,30 @@
 	<% @events.each do |event| %>
 		
 		<h1><%= event.event_type %> on <%= event.date %></h1>
-		<h1 class="volunteer">Volunteers:</h1>
-		<% if event.users.count != 0 %>
+		<% if event.users.count > 0 %>
 			<table border="1 px">	
+				<tr>
+					<th colspan="4">Volunteers</th>
+				</tr>
+
 				<tr>
 					<th>Name</th>
 					<th>Phone</th>
 					<th>Email</th>
+					<th>Volunteer Slots Open</th>
 				</tr>
 				<tr>
 					<% event.users.each do |user| %>
 						<td><%= user.first_name.capitalize %> <%= user.last_name.capitalize %></td>
 						<td><%= user.phone %></td>
 						<td><%= user.email %></td>
+						<td><%= event.needed_volunteers %></td>
 				</tr>		
 					<% end %>
 			</table>			
 		<% else %>
 			<h1 class="volunteer_msg">No Volunteers Signed Up</h1>
 		<% end %>
-		<h1 class="volunteer">Volunteer Slots Open</h1>
-			<%= event.needed_volunteers %>
 			
 	<% end %>
 </div>
