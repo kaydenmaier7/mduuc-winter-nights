@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
 	DATES = [
-						'Select Date', 
+						'Select Date',
+						'All April', 
 						'April 9, 2017', 
 						'April 10, 2017', 
 						'April 11, 2017', 
@@ -42,16 +43,22 @@ class EventsController < ApplicationController
 			@dates = DATES
 			@event_types = EVENTS_TYPES
 			
-			@events = Event.search(params[:search].capitalize)
+			@events = Event.search(params[:search])
 			
 			render 'roster'
-		elsif params[:list_events] && params[:list_events] != ""
+		elsif params[:list_events] && params[:list_events] != "" && params[:list_events] != 'All April'
 			@dates = DATES
 			@event_types = EVENTS_TYPES
 			
-			@events = Event.list_events(params[:list_events].capitalize)
+			@events = Event.list_events(params[:list_events])
 
-			render 'date'	
+			render 'date'
+		elsif params[:list_events] == 'All April'
+			@dates = DATES
+			@event_types = EVENTS_TYPES
+			@events = Event.all	
+
+			render 'team-roster'		
 		else
 			@dates = DATES
 			@event_types = EVENTS_TYPES
