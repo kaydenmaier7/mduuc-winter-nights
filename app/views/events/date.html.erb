@@ -1,23 +1,24 @@
 <div class="search-show">
+	<%= form_tag(events_path, method: :get) do %>
+		<p>
+			<label>Volunteers By Event:</label>
+			<%= select_tag(:search, options_for_select(@event_types)) %> 
+		</p>
+
+		<p>
+			<label>Volunteers By Date:</label>
+			<%= select_tag(:list_events, options_for_select(@dates)) %>
+		</p>
+
+		<p>
+			<%= submit_tag 'Search', name: nil %>
+		</p>
+	<% end %> 
+
+</div>	
 	<% if current_user.role == 'Admin' %>
 		
-		<%= form_tag(events_path, method: :get) do %>
-			<p>
-				<label>Volunteers By Event:</label>
-				<%= select_tag(:search, options_for_select(@event_types)) %> 
-			</p>
-
-			<p>
-				<label>Volunteers By Date:</label>
-				<%= select_tag(:list_events, options_for_select(@dates)) %>
-			</p>
-
-			<p>
-				<%= submit_tag 'Search', name: nil %>
-			</p>
-		<% end %> 
 	<% end %>
-</div>	
 
 <div class="event-item" align="center">
 	<% if @events.count > 0 %>
@@ -25,32 +26,34 @@
 	<% else %>
 		<h1 class="warning">Please Select an Event or Date</h1>
 	<% end %>
-		<% @events.each do |event| %>
-			<h1 class="volunteer"><%= event.event_type %></h1>
-			<% if event.users.count != 0  %>
-				<table border="1px">
-					<tr>
-						<th colspan="4">Volunteers</th>
-					</tr>
-					<tr>
-						<th>Name</th>
-						<th>Phone</th>
-						<th>Email</th>
-						<th>Volunteer Slots Open</th>
-					</tr>
+	
+	<% @events.each do |event| %>
+		<h1 class="volunteer"><%= event.event_type %></h1>
+		<% if event.users.count != 0  %>
+			<table border="1px">
+				<tr>
+					<th colspan="4">Volunteers</th>
+				</tr>
 
-					<tr>
-						<% event.users.each do |user| %>
-							<td><%= user.first_name.capitalize %> <%= user.last_name.capitalize %></td>
-							<td><%= user.phone %></td>
-							<td><%= user.email %></td>
-							<td><%= event.needed_volunteers %></td>
-					</tr>
-						<% end %>
-				</table>
+				<tr>
+					<th>Name</th>
+					<th>Phone</th>
+					<th>Email</th>
+					<th>Volunteer Slots Open</th>
+				</tr>
 
-			<% else %>
-				<h1 class="volunteer_msg">No Volunteers Signed Up</h1>
-			<% end %>
-		<% end %> 
+				<tr>
+					<% event.users.each do |user| %>
+						<td><%= user.first_name.capitalize %> <%= user.last_name.capitalize %></td>
+						<td><%= user.phone %></td>
+						<td><%= user.email %></td>
+						<td align="center"><%= event.needed_volunteers %></td>
+				</tr>
+					<% end %>
+			</table>
+
+		<% else %>
+			<h1 class="volunteer_msg">No Volunteers Signed Up</h1>
+		<% end %>
+	<% end %> 
 </div>		
