@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
   def index
 		if params[:search]
-			@users = User.search(params[:search])
+			@users = User.search(params[:search].order('last_name'))
 		else
-			@users = User.all
+			@users = User.all.order('last_name')
 			render 'master-list'  
 		end
 	end
